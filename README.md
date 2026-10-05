@@ -26,7 +26,7 @@ The whole interface is Hebrew and right-to-left.
 
 **Next.js 16** (App Router, Server Components, Server Actions) · **TypeScript** · **PostgreSQL** on Supabase · **Prisma 7** · **Clerk** (auth) · **Supabase Storage** · **Tailwind CSS v4** + shadcn/ui · **Vercel**
 
-## Engineering decisions I'm proud of
+## Engineering decisions
 
 **Authorization lives in one place.** Prisma connects with full database privileges, so database-level row security never runs for the app. Instead, every query that touches student data goes through a single module (`lib/authz.ts`) that resolves the current user on the server and checks access. User IDs never come from the URL or a form. Row-level security is still enabled on every table, with no policies, as defense in depth.
 
